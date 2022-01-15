@@ -2,6 +2,13 @@ import Image from 'next/image';
 import useSWR from 'swr';
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
+export async function getServerSideProps() {
+  const res = await fetch(`https://randomuser.me/api/?results=1000`);
+  const json = await res.json();
+
+  return { props: { json } };
+}
+
 export default function Home({ json }) {
   const { data, error } = useSWR(
     'https://randomuser.me/api/?results=500',
@@ -33,11 +40,4 @@ export default function Home({ json }) {
         ))}
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const res = await fetch(`https://randomuser.me/api/?results=1000`);
-  const json = await res.json();
-
-  return { props: { json } };
 }
