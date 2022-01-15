@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export async function getStaticProps() {
+export async function Ssg() {
   const data = await fetch('https://randomuser.me/api/?results=1000');
   const json = await data.json();
 

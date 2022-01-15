@@ -2,20 +2,16 @@ import Image from 'next/image';
 import useSWR from 'swr';
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-export async function getStaticProps() {
-  const data = await fetch('https://randomuser.me/api/?results=500');
-  const json = await data.json();
+export async function SsrAndCsr() {
+  const res = await fetch(`https://randomuser.me/api/?results=1000`);
+  const json = await res.json();
 
-  return {
-    props: {
-      json,
-    },
-  };
+  return { props: { json } };
 }
 
-export default function Post({ json }) {
+export default function Home({ json }) {
   const { data, error } = useSWR(
-    'https://randomuser.me/api/?results=1000',
+    'https://randomuser.me/api/?results=500',
     fetcher
   );
 

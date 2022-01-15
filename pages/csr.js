@@ -2,7 +2,7 @@ import Image from 'next/image';
 import useSWR from 'swr';
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-export default function Home() {
+export default function Csr() {
   const { data, error } = useSWR(
     'https://randomuser.me/api/?results=1000',
     fetcher
