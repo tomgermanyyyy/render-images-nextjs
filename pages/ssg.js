@@ -18,6 +18,15 @@ export default function Ssg({ json }) {
       <Head>
         <title>Static Site Generation</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="author" content="Duc Nguyen" />
+        <meta
+          name="description"
+          content="A webpage for rendering 1000 images using Static Site Generation"
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, Frontend, Web Development, React, Next.js, Static Site Generation"
+        />
       </Head>
       {json &&
         json.results.map((result) => (

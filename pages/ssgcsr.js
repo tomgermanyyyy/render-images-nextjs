@@ -27,6 +27,15 @@ export default function SsgAndCsr({ json }) {
       <Head>
         <title>Static Site Generation & Client Side Rendering</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="author" content="Duc Nguyen" />
+        <meta
+          name="description"
+          content="A webpage for rendering 1000 images using Static Site Generation and Client Side Rendering"
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, Frontend, Web Development, React, Next.js, Static Site Generation, Client Side Rendering"
+        />
       </Head>
       {json.results.map((result) => (
         <Image

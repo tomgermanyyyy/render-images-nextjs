@@ -17,6 +17,15 @@ export default function Csr() {
       <Head>
         <title>Client Side Rendering</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="author" content="Duc Nguyen" />
+        <meta
+          name="description"
+          content="A webpage for rendering 1000 images using Client Side Rendering"
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, Frontend, Web Development, React, Next.js, Client Side Rendering"
+        />
       </Head>
       {data.results.map((result) => (
         <Image

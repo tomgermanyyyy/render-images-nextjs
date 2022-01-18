@@ -23,6 +23,15 @@ export default function Home({ json }) {
       <Head>
         <title>Server Side Rendering & Client Side Rendering</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="author" content="Duc Nguyen" />
+        <meta
+          name="description"
+          content="A webpage for rendering 1000 images using Server Side Rendering and Client Side Rendering"
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, Frontend, Web Development, React, Next.js, Server Side Rendering, Client Side Rendering"
+        />
       </Head>
       {json.results.map((result) => (
         <Image
