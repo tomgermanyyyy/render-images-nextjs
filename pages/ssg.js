@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 
 export async function getStaticProps() {
@@ -14,6 +15,10 @@ export async function getStaticProps() {
 export default function Ssg({ json }) {
   return (
     <div>
+      <Head>
+        <title>Static Site Generation</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {json &&
         json.results.map((result) => (
           <Image

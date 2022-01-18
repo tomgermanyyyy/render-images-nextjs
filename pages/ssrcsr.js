@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import useSWR from 'swr';
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -19,6 +20,10 @@ export default function Home({ json }) {
 
   return (
     <div>
+      <Head>
+        <title>Server Side Rendering & Client Side Rendering</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {json.results.map((result) => (
         <Image
           key={result.email}
